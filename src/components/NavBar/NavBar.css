@@ -1,0 +1,44 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 8vh;
+  background-color: rgb(254, 244, 253);
+}
+
+.Logo {
+  width: 110px;
+  height: 70px;
+  margin: 10px;
+}
+
+.Enlaces-menu {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.Enlaces-menu li{
+  padding: 0 40px;
+  list-style: none;
+}
+.Enlaces-menu li a{
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+}
+
+.Ham{
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  
+}
+.Ham span{
+  display: block;
+  background-color: black;
+  height: 3px;
+  width: 28px;
+  margin: 10px auto;
+  border-radius: 2px;
+}
