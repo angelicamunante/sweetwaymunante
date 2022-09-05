@@ -1,0 +1,11 @@
+.contenedor-items{
+  height: 70px;
+  border-radius: 10px;
+  
+}
+
+.boton{
+  width: 7%;
+  height: auto;
+  margin: 2px;
+}
