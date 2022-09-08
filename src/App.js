@@ -4,7 +4,6 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 function App() {
-  const stock = 8;
   
   return (
     <div className="App">
