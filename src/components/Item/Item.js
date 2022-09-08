@@ -1,13 +1,14 @@
 const Item = ({data}) => {
   return (
-    <>
-    <h1>{data.id}</h1>
-    <img height="400px" width="400px" src={data.img} alt="foto"/>
-    <p>{data.nombre}</p>
-    <p>{data.precio}</p>
-    <p>{data.stock}</p>
 
-</>
-)
+    <div className="postres">
+      <img height="400px" width="400px" src={data.img} alt="foto"/>
+      <h2>{data.nombre}</h2>
+      <h3>S/. {data.price}</h3>
+      <p>Stock {data.stock}</p>
+      <button className="botonAgregar">Agregar al carrito</button>
+    </div>
+  )
 }
+
 export default Item

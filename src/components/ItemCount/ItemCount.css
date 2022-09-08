@@ -1,11 +1,26 @@
-.contenedor-items{
-  height: 70px;
-  border-radius: 10px;
+span {
+  color: #9e80a9;
+  font-size: 1.5rem; 
   
 }
 
-.boton{
-  width: 7%;
-  height: auto;
-  margin: 2px;
+.contador {
+  width: 50px;
+  height: 30px;
+  margin: 20px;
+  border: 1px solid hsl(281, 75%, 87%);
+  /*anchura, estilo y color borde*/
+  padding: 5px;
+  /*espacio alrededor texto*/
+  background-color: hsl(281, 75%, 87%);
+  /*color botón*/
+  color: #ffffff;
+  /*color texto*/
+  text-decoration: none;
+  /*decoración texto*/
+  text-transform: uppercase;
+  /*capitalización texto*/
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 10px;
 }

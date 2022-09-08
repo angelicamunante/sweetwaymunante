@@ -1,5 +1,4 @@
 import './ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount';
 import getFetch from '../Data/mockData';
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
@@ -19,9 +18,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <>
-            <h1 className='titulo'>{greeting}</h1>
-            <ItemCount />
-
+            <h2 className="texto">{greeting}</h2>
             {
                 loading ? <span>Cargando...</span> :
                     <ItemList productos={data}></ItemList>
