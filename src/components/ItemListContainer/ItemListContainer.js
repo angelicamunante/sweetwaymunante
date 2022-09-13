@@ -1,29 +1,29 @@
 import './ItemListContainer.css'
-import getFetch from '../Data/mockData';
+import ItemCount from '../ItemCount/ItemCount';
+import Data from '../Data/mockData';
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
 
 
-const ItemListContainer = ({ greeting }) => {
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState(true)
+const ItemListContainer = ({greeting}) => {
+    const [productList, setProductList] = useState([]);
+    useEffect (() => {
+        getProducts.then((response) => {
+            setProductList(response);
+        })
+    },)
 
-    useEffect(()=>{
-        getFetch
-        .then((resp)=>setData(resp))
-        .catch((err)=>setData(err))
-        .finally(()=>setLoading(false))
-    },[])
-
+    const getProducts = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(Data);
+        }, 2000);
+    });
 
     return (
         <>
             <h2 className="texto">{greeting}</h2>
-            {
-                loading ? <span>Cargando...</span> :
-                    <ItemList productos={data}></ItemList>
-            }
-
+            <ItemList lista = {productList}/>
+            <ItemCount />
         </>
     )
 };

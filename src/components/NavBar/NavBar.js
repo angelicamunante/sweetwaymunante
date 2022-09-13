@@ -1,31 +1,28 @@
 import logo from '../../img/Logo.png';
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
+import { BrowserRouter as Router } from 'react-router-dom';
+import { NavLink } from "react-router-dom"
 
 const NavBar = () => {
-
     return (
+        <Router>
+    <div className="menu">
+        <NavLink to={"./App.js"}>
+            <img src={logo} className="logo" alt="logo" />
+        </NavLink>
 
-        <nav className="Contenedor-navbar">
-            <a href="#">
-                <img className="Logo" src={logo} alt="logo"></img>
-            </a>
-            <ul className="Enlaces-menu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-                <li><a href="#">CONTACTO</a></li>
-            </ul>
-            <CartWidget />
-            <button className="Ham" type="button">
-                <span className="br-1"></span>
-                <span className="br-2"></span>
-                <span className="br-3"></span>
-            </button>
-
-        </nav>
-
+        <ul>
+            <li className="lista"><NavLink to={"./App.js"}>Inicio</NavLink></li>
+            <li className="lista"><NavLink to={"/productos"}>Productos</NavLink></li>   
+            <li className="lista"><NavLink to={"/category/tortas"}>Tortas</NavLink></li> 
+            <li className="lista"><NavLink to={"/category/bocaditos"}>Bocaditos</NavLink></li>        
+        </ul>
+        <button className="botonSesion">Inicia sesion</button>
+        <CartWidget/>
+    </div>
+    </Router>
     )
 }
-
 
 export default NavBar;

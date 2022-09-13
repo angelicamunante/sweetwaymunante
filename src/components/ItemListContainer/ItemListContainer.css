@@ -1,4 +1,11 @@
 .titulo{
   color: #d9bbcb;
+  font-family: MuseoSans-300;
   font-size: 2rem;
+}
+
+.texto {
+  background-color: rgb(216, 179, 206);
+  color: #ffffff;
+  text-align: center;
 }

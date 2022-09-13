@@ -43,3 +43,14 @@
   box-sizing: border-box
 }
 
+.nav-link{
+  color: wheat;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+}
+
+.card{
+    width: 18rem;
+    color: black;
+  
+  }

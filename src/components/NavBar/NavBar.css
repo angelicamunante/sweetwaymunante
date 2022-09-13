@@ -1,44 +1,47 @@
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 8vh;
-  background-color: rgb(254, 244, 253);
+.lista {
+  display: inline-block;
+  font-weight: bold;
+  padding: 20px;
 }
-
-.Logo {
-  width: 110px;
-  height: 70px;
-  margin: 10px;
-}
-
-.Enlaces-menu {
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-.Enlaces-menu li{
-  padding: 0 40px;
-  list-style: none;
-}
-.Enlaces-menu li a{
+a {
   text-decoration: none;
-  font-size: 1rem;
-  color: black;
+  color: #d9a9cc;
+}
+.lista:hover {
+  transform: scale(1.1);
+}
+.botonSesion {
+  border: 1px solid #e0b0c85e;
+  /*anchura, estilo y color borde*/
+  padding: 5px;
+  /*espacio alrededor texto*/
+  background-color: #e0b8d1;
+  /*color botón*/
+  color: #ffffff;
+  /*color texto*/
+  text-decoration: none;
+  /*decoración texto*/
+  text-transform: uppercase;
+  /*capitalización texto*/
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.Ham{
-  display: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(244, 244, 244);
 }
-.Ham span{
-  display: block;
-  background-color: black;
-  height: 3px;
-  width: 28px;
-  margin: 10px auto;
-  border-radius: 2px;
+
+.logo {
+  width: 70px;
+  border-radius: 100px;
+}
+.logo:hover {
+  transform: scale(1.2);
+  transition: 1.3s;
 }

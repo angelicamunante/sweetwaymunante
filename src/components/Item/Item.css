@@ -1,0 +1,36 @@
+.postres {
+  width: 350px;
+  background-color: white;
+  border-radius: 30px;
+  padding-top: 30px;
+  margin-top: 20px;
+}
+.imagenesPostre:hover {
+  scale: 1.1;
+  transition: 1.5s;
+}
+
+.botonAgregar {
+  border: 1px solid #c99de764;
+  /*anchura, estilo y color borde*/
+  padding: 5px;
+  /*espacio alrededor texto*/
+  background-color: #ffffff;
+  /*color botón*/
+  color: #ffffff;
+  /*color texto*/
+  text-decoration: none;
+  /*decoración texto*/
+  text-transform: uppercase;
+  /*capitalización texto*/
+  border-radius: 50px;
+  text-align: center;
+  margin: 10px 0px 20px 0px;
+
+}
+h2,h3 {
+  color: rgb(255, 255, 255);
+}
+img {
+  border-radius: 30px;
+}
