@@ -14,7 +14,7 @@ const NavBar = () => {
                 <li className="lista"><NavLink to={"/"}>Inicio</NavLink></li>
                 <li className="lista"><NavLink to={"/productos"}>Productos</NavLink></li>   
                 <li className="lista"><NavLink to={"/category/tortas"}>Tortas</NavLink></li> 
-                <li className="lista"><NavLink to={"/category/bocaditos"}>Bocaditos</NavLink></li>        
+                <li className="lista"><NavLink to={"/category/bocaditos"}>Bocaditos</NavLink></li>   
             </ul>
             <button className="botonSesion">Inicia sesion</button>
             <CartWidget/>

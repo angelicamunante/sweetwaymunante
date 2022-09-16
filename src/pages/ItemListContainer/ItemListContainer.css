@@ -9,3 +9,19 @@
   color: #ffffff;
   text-align: center;
 }
+
+.ItemListContainer{
+  padding-top: 20px;
+  text-align: center;
+  margin: 100px auto;
+  font-family: sans-serif;
+  max-width: 80%;
+ 
+}
+
+.cargando{
+  color: #fff;
+  text-align: center;
+  margin-top: 20%;
+  
+}
