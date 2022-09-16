@@ -1,30 +1,23 @@
 import Item from "../Item/Item"
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import './ItemList.css'
 
 const ItemList = ({lista}) => {
   return (
-    <Router>
     <div>
     {
         lista.map((product) =>(
-            <Link 
-            key={ product.id }
-            to={"/detalles/" + product.id }
-            >
+            <NavLink to={"/detalles/" + product.id } key={ product.id }>
                 <Item 
-                    nombre = {product.title} 
-                    precio = {product.price} 
-                    imagen = {product.img} 
-                    categoria = {product.category}
+                    title = {product.title} 
+                    price = {product.price} 
+                    img = {product.img} 
                 />
-            </Link>
+            </NavLink>
         ))
     }
-</div>
-</Router>
-
-)
+    </div>
+    )
 }
 
 export default ItemList

@@ -1,6 +1,6 @@
 const data = [
   {
-    id:1,
+    id:"1",
     title:"Cupcakes",
     price: 8,
     img:"/cupcake_vainilla.jpeg",
@@ -9,7 +9,7 @@ const data = [
     category: "Bocaditos"
   },
   {
-    id:2,
+    id:"2",
     title:"Torta doña pepa",
     price:60,
     img:"/torta_doñapepa.jpeg",
@@ -18,7 +18,7 @@ const data = [
     category: "Tortas"
   },
   {
-    id:3,
+    id:"3",
     title:"Torta de zanahoria",
     price:80,
     img:"/torta_zanahoria.jpeg",

@@ -1,19 +1,19 @@
 .lista {
   display: inline-block;
   font-weight: bold;
-  padding: 20px;
+  padding: 30px;
 }
 a {
-  text-decoration: none;
+  text-decoration:none;
   color: #d9a9cc;
 }
 .lista:hover {
   transform: scale(1.1);
 }
 .botonSesion {
-  border: 1px solid #e0b0c85e;
+  border: 1px solid #e8d5df5e;
   /*anchura, estilo y color borde*/
-  padding: 5px;
+  padding: 10px;
   /*espacio alrededor texto*/
   background-color: #e0b8d1;
   /*color botón*/
@@ -28,7 +28,7 @@ a {
   margin-top: 10px;
 }
 
-.menu {
+.inicio {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

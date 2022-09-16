@@ -1,0 +1,17 @@
+p {
+  color: #b89cec;
+  padding: 20px;
+  text-align: center;
+}
+.descripcion {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+.titulo {
+  color: #805b7f;
+  text-align: center;
+}
+.detalle {
+  color: #ecb7e97f;
+  text-align: center;
+}

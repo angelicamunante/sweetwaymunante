@@ -1,16 +1,12 @@
 import React from "react"
 import './Item.css'
 
-const Item = ({ title, price, img, stock, category }) => {
+const Item = ({ title, price, img }) => {
   return (
-
-  <div className="postres">
-      <h2>Categororia: {category}</h2>
-      <img src={img} alt={title} className="imagenesPostres" />
-      <h2>{title}</h2>
-      <h3>S/. {price}</h3>
-      <p>Stock {stock}</p>
-      <button className="botonAgregar">Agregar al carrito</button>
+    <div className="postres">
+        <img width="300" src={img} alt="foto" className="imagenesPostres" />
+        <h2>{title}</h2>
+        <h3>Precio: S/. {price}</h3>
     </div>
   )
 }

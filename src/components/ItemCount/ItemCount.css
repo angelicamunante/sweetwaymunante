@@ -1,26 +1,68 @@
-span {
-  color: #9e80a9;
-  font-size: 1.5rem; 
-  
+.contadorContenedor{
+  width: 100%;
 }
 
-.contador {
-  width: 50px;
-  height: 30px;
-  margin: 20px;
-  border: 1px solid hsl(281, 75%, 87%);
-  /*anchura, estilo y color borde*/
-  padding: 5px;
-  /*espacio alrededor texto*/
-  background-color: hsl(281, 75%, 87%);
-  /*color botón*/
-  color: #ffffff;
-  /*color texto*/
-  text-decoration: none;
-  /*decoración texto*/
-  text-transform: uppercase;
-  /*capitalización texto*/
-  border-radius: 50px;
+.contador{
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin-top: 10px;
+  border-radius: 15px;
+}    
+.sumar{
+  background: rgb(191, 222, 191);
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px rgb(240, 210, 210); 
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgb(240, 210, 210);
+}
+.resta{
+  background: rgb(208, 167, 167);
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 5px;
+  border: 1px rgb(240, 210, 210); 
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgb(240, 210, 210);
+}
+.stock{
+  font-size: 20px;
+  color: #070707;
+  text-align: center;
+  width: 100px;
+}
+
+.boton{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  margin: 20px 10px;
+}
+
+.agregarAlCarrito{
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(206, 187, 187, 0.129); 
+  color: white;
+  background-color:rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px #f9cdeb;
+  box-shadow: 0 5px 15px #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.stockDisponible{
+  font-size: 18px;
+  padding: 15px;
 }

@@ -4,22 +4,27 @@ import './ItemCount.css';
 const ItemCount = ({initial, stock, onAdd}) => {
     const [items, setItems] = useState(initial);
 
-    const sumar = () => items <= stock - 1 ? setItems(items + 1) : alert('Este es el limite de stock.')
-    const restar = () => items > 0 ? setItems(items - 1) : alert('No se puede números negativos.')
-    const handleOnAdd = () => {
-        if (items <= stock) onAdd(items);
-      };
+    const sumar = () => { 
+       setItems(items + 1);
+    }
+    const restar = () => {
+        setItems(items - 1);
+    }
 
     return (
         <>
-            <div className="contenedor-items">
-                <div className="texto">Tengo {items} items.</div>
-                <button className="boton" onClick={sumar}>+</button>
-                <button className="boton" onClick={restar}>-</button>
-                <p className="texto">Stock {stock}</p>
+            <div className="contadorContenedor">
+            <div className="stockDisponible">
+                    <p>{ stock > 1 ? `${ stock } unidades disponibles` : `${ stock } unidades disponibles` }</p>
             </div>
-            <button onClick={handleOnAdd}>Agregar al carrito</button>
-
+            <div className="contador"></div>
+                <button className="sumar" disabled={ items >= stock } onClick={ sumar }>+</button>
+                <h3 className="stock">{ items }</h3>
+                <button className="resta" disabled={ items <= 1 } onClick={ restar }>-</button>
+            </div>
+            <div className="boton">                     
+                <button className="agregarAlCarrito" disabled={ stock <= 0 } onClick={() => onAdd(items) }>Agregar Producto</button>
+            </div>
         </>
     )
 }
