@@ -5,20 +5,22 @@ import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer';
 import HomeContainer from './pages/Home/Home';
 import Cart from './components/Cart/Cart';
-
+import CartProvider from './Context/Cartcontext';
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
       <NavBar />
       <Routes>
         <Route path='/' element={<HomeContainer greetings={"Bienvenidos a Sweet Way"} />}/>
-        <Route path='/productos' element={<ItemListContainer greeting={"Bienvenidos a Sweet Way"} />}/>
+        <Route path='/productos' element={<ItemListContainer greeting={"Productos"} />}/>
         <Route path='/detalles/:id' element={<ItemDetailContainer /> } />
         <Route path='/category/:categoryName' element={<ItemListContainer /> } />
         <Route path="/cart" element={ <Cart/> } />
       </Routes>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 
