@@ -6,6 +6,7 @@ import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer
 import HomeContainer from './pages/Home/Home';
 import Cart from './components/Cart/Cart';
 import CartProvider from './Context/Cartcontext';
+import FinalizarCompra from './FinalizarCompra/FinalizarCompra'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/detalles/:id' element={<ItemDetailContainer /> } />
         <Route path='/category/:categoryName' element={<ItemListContainer /> } />
         <Route path="/cart" element={ <Cart/> } />
+        <Route path="/finalizarCompra" element={ <FinalizarCompra/> } />
       </Routes>
     </BrowserRouter>
     </CartProvider>

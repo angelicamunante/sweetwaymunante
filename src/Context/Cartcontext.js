@@ -8,30 +8,39 @@ const CartProvider = ( { children } ) => {
 
     const [ cart, setCart] = useState( [] );
 
-    const addItem = ( item, cantidad ) => {
+    const addItem = ( item, quantity ) => {
+        console.log(item)
+        // console.log(isInCart(item.id))
         if( isInCart( item.id ) ){
-            alert('Ya está en el carrito')
-            // setCart( cart.map( menu => {
-            // return menu.id === item.id ? { ...menu, cantidad: menu.cantidad + cantidad } : menu
-        // } )); 
+            setCart( cart.map( product => {
+            return product.id === item.id ? { ...product, quantity: product.quantity + quantity} : product
+        } )); 
         } else {
-            setCart( [...cart, { ...item, cantidad } ] )
+            setCart( [...cart, { ...item, quantity } ] )
         }
-        console.log('cart', [...cart, {...item, cantidad}])
+        console.log('cart', [...cart, {...item, quantity}])
     };
 
     const clearCart = () => setCart( [] );
 
-    const isInCart = ( id ) => cart.some( menu => menu.id === id );
+    const isInCart = ( id ) =>
+        {  cart.some( item => item.id === id );}
 
-    const removeItem = ( id ) => setCart( cart.filter( menu => menu.id !== id ) );
+    const removeItem = ( id ) => setCart( cart.filter( lista => lista.id !== id ) );
+
+    const totalPrice = () => cart.reduce((prev, act) => prev + act.quantity * act.precio, 0 );
+
+    const totalListas = () => cart.reduce((acumulador, listaActual) => acumulador + listaActual.quantity, 0 );
 
     return (
         <CartContext.Provider value= { {
             clearCart,
             isInCart,
             removeItem,
-            addItem
+            addItem,
+            totalPrice,
+            totalListas,
+            cart
         } }>
             { children }
         </CartContext.Provider>

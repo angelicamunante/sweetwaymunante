@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
 
     (
         <>
-          <ItemDetail lista = {producDetail} />
+          <ItemDetail product = {producDetail} />
         </>
     );
 };
