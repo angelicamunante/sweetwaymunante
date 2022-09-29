@@ -15,16 +15,16 @@ const ItemListContainer = ({ greeting }) => {
       if(categoryName){
           const queryFiltered = query(querySnapshot, where("categoryName", "==",categoryName))
           getDocs(queryFiltered).then((response) => {
-              console.log(response.docs);
               const data = response.docs.map((products) => {
+                console.log(products.data())
                   return {id: products.id, ...products.data()}
               })
               setProductList(data);
           })
       }else{
           getDocs(querySnapshot).then((response) => {
-              console.log(response.docs);
               const data = response.docs.map((products) => {
+                  console.log(products.data())
                   return {id: products.id, ...products.data()}
               })
               setProductList(data);
