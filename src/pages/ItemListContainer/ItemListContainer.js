@@ -1,39 +1,42 @@
 import "./ItemListContainer.css";
-import Data from "../../components/Data/mockData";
+// import Data from "../../components/Data/mockData";
 import { useEffect, useState } from "react";
 import ItemList from "../../components/ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 
 const ItemListContainer = ({ greeting }) => {
   const { categoryName } = useParams();
-  const [loading, setLoading] = useState(true);
   const [productList, setProductList] = useState([]);
-  useEffect(() => {
-    const getProducts = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(Data);
-      }, 2000);
-    });
 
-    const filterData = (response) => {
-      return response.filter(
-        (data) => data.category.toLowerCase() === categoryName
-      );
-    };
+    const getProducts = () => {
+      const db = getFirestore();
+      const querySnapshot = collection(db, "items");
+      if(categoryName){
+          const queryFiltered = query(querySnapshot, where("categoryName", "==",categoryName))
+          getDocs(queryFiltered).then((response) => {
+              console.log(response.docs);
+              const data = response.docs.map((products) => {
+                  return {id: products.id, ...products.data()}
+              })
+              setProductList(data);
+          })
+      }else{
+          getDocs(querySnapshot).then((response) => {
+              console.log(response.docs);
+              const data = response.docs.map((products) => {
+                  return {id: products.id, ...products.data()}
+              })
+              setProductList(data);
+          })
+        }
+    }
 
-    getProducts
-      .then((response) => {
-        const finalData = categoryName ? filterData(response) : response;
-        setProductList(finalData);
-      })
-      .finally(() => setLoading(false));
-  }, [categoryName]);
+    useEffect(() => {
+      getProducts();
+    },[categoryName]);    
 
-  return loading ? (
-    <div className="cargando">
-      <h1>Cargando...</h1>
-    </div>
-  ) : (
+  return (
     <div className="ItemListContainer">
       <h1 className="titulo">{greeting}</h1>
       <br />
