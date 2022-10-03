@@ -27,7 +27,7 @@ const CartProvider = ( { children } ) => {
 
     const removeItem = ( id ) => setCart( cart.filter( lista => lista.id !== id ) );
 
-    const totalPrice = () => cart.reduce((prev, act) => prev + act.quantity * act.precio, 0 );
+    const totalPrice = () => cart.reduce((prev, act) => prev + act.quantity * act.price, 0 );
 
     const totalListas = () => cart.reduce((acumulador, listaActual) => acumulador + listaActual.quantity, 0 );
 

@@ -3,10 +3,6 @@ import imgCarrito from '../../img/carrito.png'
 import {useCartContext} from "../../Context/Cartcontext"
 import './CartWidget.css'
 
-// const CartWidget = () => {
-//     return <Link to={'/cart'}><img src={imgCarrito} alt="carrito" className='carritoImg'></img></Link>
-// };
-
 function CartWidget() {
     const { totalListas } = useCartContext();
     return (
