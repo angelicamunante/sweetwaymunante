@@ -1,0 +1,23 @@
+.footerContainer{
+  background: rgba(243, 203, 241, 0.194);
+  padding: 15px 0 30px;
+ 
+}
+
+.footer, .icon{
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem 0;
+  color: #d78fc8bc;
+}
+.text{
+  text-align: center;
+  color: #d78fc8bc;
+  padding: 0.5rem 0.5rem 0;
+}
+svg {
+  fill: #d78fc8bc;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}

@@ -6,6 +6,8 @@
 a {
   text-decoration:none;
   color: #d9a9cc;
+  display: inline-block;
+  margin: 2%;
 }
 .lista:hover {
   transform: scale(1.1);

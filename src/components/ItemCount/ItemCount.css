@@ -34,10 +34,9 @@
   box-shadow: 0 5px 15px rgb(240, 210, 210);
 }
 .stock{
-  font-size: 20px;
+  font-size: 30px;
   color: #070707;
   text-align: center;
-  width: 100px;
 }
 
 .boton{
@@ -51,11 +50,11 @@
 .agregarAlCarrito{
   font-size: 25px;
   text-align: center;
-  width: 100%;
+  width: 40%;
   border-radius: 10px;
   border: 1px solid rgba(206, 187, 187, 0.129); 
   color: white;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(156, 122, 156, 0.759);
   box-shadow: 0 5px 15px #f9cdeb;
   box-shadow: 0 5px 15px #fff;
   padding: 5px;

@@ -16,19 +16,16 @@
 
 .listaDescripcion {
   width: 200px;
-  margin: 65px auto;
 }
 
 .listaItem{
   text-align: left;
   width: 500px;
-  margin: 65px auto;
 }
 
 .listaDescripcion p, .listaItem p{
   margin: 2px;
   font-size: 20px;
-  /*color: #e07924;*/
 }
 
 

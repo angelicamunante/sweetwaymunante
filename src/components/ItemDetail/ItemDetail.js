@@ -29,7 +29,7 @@ const ItemDetail = ({product}) => {
                 goToCart
                 ? <div className="bottons">
                     <Link className="terminarCompra" to="/Cart">Terminar Compra</Link>
-                    <Link className="SeguirComparando" to="/productos">Seguir Comprando</Link>
+                    <Link className="SeguirComprando" to="/productos">Seguir Comprando</Link>
                 </div>
                 : 
                 <ItemCount initial={1} stock={product.stock} onAdd={onAdd} />

@@ -7,6 +7,7 @@ import HomeContainer from './pages/Home/Home';
 import Cart from './components/Cart/Cart';
 import CartProvider from './Context/Cartcontext';
 import FinalizarCompra from './FinalizarCompra/FinalizarCompra'
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/cart" element={ <Cart/> } />
         <Route path="/finalizarCompra" element={ <FinalizarCompra/> } />
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </CartProvider>
   );

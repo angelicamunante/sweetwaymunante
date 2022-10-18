@@ -19,13 +19,19 @@ p {
 .terminarCompra{
   font-size: 25px;
   text-align: center;
-  width: 100%;
+  width: 20%;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.5); 
+  border: 1px solid rgba(255, 255, 255, 0.5); 
   color: white;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(141, 115, 144, 0.752);
   box-shadow: 0 5px 15px #fff;
   padding: 5px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.contadorDetail{
+  grid-area: contadorDetail;
+  text-align: center;
+  min-height: 150px;
 }

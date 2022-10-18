@@ -1,7 +1,8 @@
 import logo from '../../img/Logo.png';
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+
 
 const NavBar = () => {
     return (

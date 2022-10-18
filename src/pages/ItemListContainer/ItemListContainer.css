@@ -1,6 +1,5 @@
 .titulo{
   color: #d9bbcb;
-  font-family: MuseoSans-300;
   font-size: 2rem;
 }
 
@@ -11,17 +10,8 @@
 }
 
 .ItemListContainer{
-  padding-top: 20px;
   text-align: center;
-  margin: 100px auto;
-  font-family: sans-serif;
-  max-width: 80%;
- 
-}
-
-.cargando{
-  color: #fff;
-  text-align: center;
-  margin-top: 20%;
-  
+  margin: 30px auto;
+  max-width: 90%;
+  min-height: 72vh;
 }

@@ -13,7 +13,7 @@ function Cart(){
     const [telefono, setTelefono] = useState("");
     const [email, setEmail] = useState("");
     const [domicilio, setDomicilio] = useState("");
-    const [orderId, setOrderId] = useState("");
+    const [orderId, setOrderId] = useState(false);
 
     const nombreCliente = (event) => {
         const value = event.target.value;
@@ -107,7 +107,7 @@ console.log('esta es tu orden es', orderId);
                             onChange={emailCliente}
                         ></input>
                         <br/>
-                        <label>Domilicio</label>
+                        <label>Domicilio</label>
                         <br/>
                         <input
                             type="text"
@@ -116,7 +116,7 @@ console.log('esta es tu orden es', orderId);
                             onChange={domicilioCliente}
                         ></input>
                         <br/>
-                        <label>Telefono</label>
+                        <label>Teléfono</label>
                         <br/>
                         <input
                             min="0"
