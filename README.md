@@ -9,4 +9,4 @@ Es un Ecommerce de tortas y bocaditos
 - [React-router-dom](https://v5.reactrouter.com/)
 
 ## Gif use demo
-![Gif](https://user-images.githubusercontent.com/94662843/190560911-68e2f2b4-474f-45e5-b324-de4518d4c5ed.gif)
+![Gif] (https://user-images.githubusercontent.com/94662843/196759848-4f9ddcc9-fb51-4a2e-a332-5869203cedcc.gif)
